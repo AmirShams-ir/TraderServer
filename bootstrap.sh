@@ -111,9 +111,8 @@ rept "System update completed"
 info "Starting essential package installation..."
 
 apt-get install -y \
-  sudo curl wget git dialog ca-certificates gnupg lsb-release \
-  zram-tools zip unzip net-tools openssl build-essential \
-  bash-completion unattended-upgrades \
+  sudo curl wget git zip unzip openssh-server lsb-release systemd-timesyncd \
+  zram-tools mtr net-tools build-essential unattended-upgrades fail2ban ufw \
   || die "Package installation failed"
 
 rept "Essential packages installed"
